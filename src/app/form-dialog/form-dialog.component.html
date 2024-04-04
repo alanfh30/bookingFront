@@ -1,0 +1,24 @@
+<h2 mat-dialog-title>Hi dear client</h2>
+<mat-dialog-content>
+  <p>Welcome to our restaurant</p>
+  <p>Please fill the information to make a reservation</p>
+  <mat-form-field>
+    <mat-label>Your Name</mat-label>
+    <input matInput [(ngModel)]="reservation.name">
+  </mat-form-field>
+    <br>
+  <mat-form-field>
+    <mat-label>Number of people including you</mat-label>
+    <input matInput [(ngModel)]="reservation.tableSize">
+  </mat-form-field>
+  <br>
+  <mat-form-field>
+    <mat-label>Select the date and hour</mat-label>
+    <input matInput type="datetime-local" [(ngModel)]="reservation.dateAndHour">
+  </mat-form-field>
+
+
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button [mat-dialog-close]="reservation" cdkFocusInitial>Ok</button>
+</mat-dialog-actions>
